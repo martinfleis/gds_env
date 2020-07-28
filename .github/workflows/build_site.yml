@@ -29,7 +29,6 @@ jobs:
 
       - name: Commit files
         run: |
-          touch docs/.nojekyll
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -m "Build website" -a --allow-empty

@@ -33,11 +33,9 @@ website_build:
 	cd website && \
 	jekyll build --trace
 website: website_build
-	rm -rf docs
 	cd website && \
 	mv _site ../docs && \
 	rm -rf _includes
-	touch docs/.nojekyll
 website_local: website_build
 	export JEKYLL_ENV=docker && \
 	cd website && \
