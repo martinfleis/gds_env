@@ -12,10 +12,12 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install jekyll and build the site
+      - name: Install ruby
         uses: actions/setup-ruby@v1
         with:
           ruby-version: "2.6"
+
+      - name: Install jekyll and build the site
         run: |
           gem install jekyll bundler
           make website
