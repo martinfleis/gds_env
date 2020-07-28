@@ -1,0 +1,32 @@
+name: Build site
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-html-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Install jekyll and build the site
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: "2.6"
+        run: |
+          gem install jekyll bundler
+          make website
+
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Build website" -a --allow-empty
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
