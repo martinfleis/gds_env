@@ -31,7 +31,7 @@ website_build:
 	cp gds_dev/README.md website/_includes/gds_dev_README.md
 	#---
 	cd website && \
-	jekyll build
+	jekyll build --trace
 website: website_build
 	rm -rf docs \
 	cd website && \
