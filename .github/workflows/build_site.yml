@@ -26,6 +26,7 @@ jobs:
       - name: Build the site
         run: |
           make website
+          touch docs/.nojekyll
 
       - name: Commit files
         run: |

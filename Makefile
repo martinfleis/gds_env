@@ -34,7 +34,6 @@ website_build:
 	jekyll build --trace
 website: website_build
 	rm -rf docs
-	cd website && ls 
 	cd website && \
 	mv _site ../docs && \
 	rm -rf _includes
