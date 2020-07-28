@@ -30,9 +30,12 @@ website_build:
 	cp stack_py.txt website/_includes/stack_py.txt
 	cp gds_dev/README.md website/_includes/gds_dev_README.md
 	#---
+	cd website && ls
 	cd website && \
 	jekyll build --trace
+	cd website && ls
 website: website_build
+	cd website && ls
 	rm -rf docs \
 	cd website && \
 	mv _site ../docs && \

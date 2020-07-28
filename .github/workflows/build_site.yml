@@ -19,14 +19,12 @@ jobs:
 
       - name: Install jekyll
         run: |
-          chmod -R a+w /home/runner/work/gds_env/gds_env/website
           gem install github-pages
           gem install jekyll-scholar
           gem install just-the-docs
 
       - name: Build the site
         run: |
-          chmod -R a+w /home/runner/work/gds_env/gds_env/website
           make website
 
       - name: Commit files
