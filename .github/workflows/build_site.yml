@@ -23,7 +23,6 @@ jobs:
 
       - name: Build the site
         run: |
-          chmod -R a+w /github/workspace
           make website
 
       - name: Commit files
