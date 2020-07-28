@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - actions
 jobs:
   build-html-and-deploy:
     runs-on: ubuntu-latest
