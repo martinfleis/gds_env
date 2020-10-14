@@ -13,8 +13,7 @@ RUN conda update conda --yes \
     && conda config --add channels pyviz \
     && conda config --add channels makepath \
     && conda config --set channel_priority strict \
-    && conda install mamba \
-    && mamba install --yes --quiet \
+    && conda install --yes --quiet \
     #'python=3.7' \
     'black' \
     'bokeh' \
