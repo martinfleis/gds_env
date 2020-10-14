@@ -1,5 +1,5 @@
 # Jun'20
-FROM rapidsai/rapidsai:cuda10.1-runtime-ubuntu18.04
+FROM rapidsai/rapidsai:cuda11.0-runtime-ubuntu18.04
 
 MAINTAINER Dani Arribas-Bel <D.Arribas-Bel@liverpool.ac.uk>
 
@@ -13,7 +13,8 @@ RUN conda update conda --yes \
     && conda config --add channels pyviz \
     && conda config --add channels makepath \
     && conda config --set channel_priority strict \
-    && conda install --yes --quiet \
+    && conda install mamba \
+    && mamba install --yes --quiet \
     #'python=3.7' \
     'black' \
     'bokeh' \
