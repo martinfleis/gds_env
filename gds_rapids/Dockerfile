@@ -1,5 +1,5 @@
 # Jun'20
-FROM rapidsai/rapidsai:cuda11.0-runtime-ubuntu18.04-py3.8
+FROM rapidsai/rapidsai:cuda10.1-runtime-ubuntu18.04
 
 MAINTAINER Dani Arribas-Bel <D.Arribas-Bel@liverpool.ac.uk>
 
